@@ -1,0 +1,483 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+$whole: 100%;
+$content: 1200px;//内容宽度
+$white: #ffffff;//白色
+/*第一部分*/
+.banner{
+    width: $whole;
+    height: 787px;
+    background: #75B32A;
+    background-image: url(iPhone.png);
+    background-repeat:no-repeat ;
+    background-size: contain;
+}
+
+/*所有的内容区域*/
+.content{
+    width: $content;
+    height: $whole;
+//  border: 1px solid #FF0000;
+    margin: 0 auto;
+    position: relative;
+}
+/*第一部分*/
+.banner_content{
+   ul{
+       content: '';
+       display: inline-block;
+       list-style: none;
+       width: 840px;
+       height: 18px;
+       margin-left: 200px;
+   }
+   li{
+       float: left;
+       font-size: 18px;
+       color: #FFFFFF;
+       margin-right: 42px;
+       &:last-child{
+           margin-right: 0;
+       }
+   }
+   .title{
+       width: 839px;
+       height: 85px;
+       color: #FFFFFF;
+       font-size: 90px;
+       text-align: center;
+       line-height: 85px;
+       position: absolute;
+       top: 180px;
+       margin-left: 150px;
+   }
+   .botton{
+        position: absolute;
+        top: 340px;
+        left: 300px;
+   }
+   .app,
+   .play{
+       content: '';
+       display: block;
+       width: 255px;
+       height: 75px;
+       border: 1px solid $white;
+       font-size: 30px;
+       padding-left: 90px;
+       color:$white;
+       background:url(images/banner_07.png)no-repeat 22px 12px ;
+       background-color:rgba(0,0,0,0) ;
+       float: left;
+       border-radius: 4%;
+   }
+   .play{
+       background:url(images/banner_10.png)no-repeat 22px 12px ;
+       margin-left: 29px;
+   }
+   .spot{
+       position: absolute;
+       bottom: 55px;
+       left: 545px;
+   }
+    i{
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius:50%;
+        border: 1px solid $white;
+        &:nth-child(1){
+            background:$white;
+        }
+    }
+}
+/*第二部分*/
+.whatama{
+    width: $whole;
+    height: 695px;
+//  outline: 1px solid #ff0000;   
+}
+.whatama_content{
+        .title{
+           width: 249px;
+           height: 46px;
+           color: #3a3a3a;
+           font-size: 48px;
+           text-align: center;
+           line-height: 46px;
+           margin: 109px auto;
+       }
+       .ama{
+           width: 1090px;
+           height: 360px;
+//         outline: 1px solid #eeeeee;
+           position: absolute;
+           top: 64px;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           margin: auto;
+           .ama1,
+           .ama2,
+           .ama3{
+               width: 249px;
+               height: 359px;
+//             border: 1px solid #f00;
+               float: left;
+               margin-right: 170px;
+               box-sizing: border-box;
+               font-size: 16px;
+               text-align: center;
+               color: #666666;
+                .text{
+                    margin-top: 41px;
+                }
+           }
+           .ama3{
+                margin-right: 0px;
+           }
+       }
+}
+
+/*第三部分*/
+.share{
+    background: #262626;
+}
+.share_content{
+   height: 734px;
+   overflow: hidden;
+   
+   .left,
+   .right{
+       width: 700px;
+       float: left;
+   }
+   h2{
+       color: $white;
+   }
+   .right{
+       width: 432px;
+       height: 345px;
+       margin: 191px auto;
+       .text-top{
+           margin-bottom: 55px;
+           color: #aeaeae;
+       }
+       .text-bottom{
+           width: 434px;
+           color: #aeaeae;
+           .bottom_left,
+           .bottom_right{
+               float: left;
+               
+           }
+           .bottom_right{
+               width: 233px;
+               height: 88px;
+               margin-left: 30px;
+           }
+       }
+   }
+}
+
+/*第四部分*/
+.new{
+    background: #313131;
+}
+.new_content{
+    height: 803px;
+    overflow: hidden;
+    .left,
+    .right{
+       width: 460px;
+       height: 803px;
+       float: left;
+//     border: 1px solid #AEAEAE;
+   }
+   .left{
+       width: 700px;
+       .left_content{
+           width: 470px;
+           height: 686px;
+//         background: #eee;
+           float: right;
+           margin-top: 117px;
+       }
+       h2{
+           color: #fff;
+           margin-bottom: 40px;
+        }
+        .text-top{
+            font-size: 18px;
+            color: #AEAEAE;
+            margin-bottom: 69px;
+        }
+        .box{
+            width: 470px;
+            height: 232px;
+//          border: 1px solid #eee;
+            background-color: $white;
+            position: relative;
+            .img,
+            .box_content{
+                float: left;
+            }
+            .img{
+                margin-top: 43px;
+                margin-left: 31px;
+            }
+            .box_content{
+                width: 258px;
+                height: 291px;
+                margin-left: 30px;
+                h3{
+                    color: #74B22B;
+                }
+                color: #666666;
+            }
+            
+        }
+        .box_footer{
+            width: 470px;
+            height: 43px;
+            background: #82C830;
+            position: absolute;
+            bottom: 0px;
+            ul{
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                margin-left: 35px;
+                margin-top: 14px;
+                li{
+                    content: '';
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    border: 1px solid $white;
+                    border-radius: 50%;
+                    &:nth-child(1){
+                        background: $white;
+                    }
+                }
+            }
+        }
+   } 
+}
+
+/*第五部分*/
+.taken{
+    height: 704px;
+    .taken_content{
+        height: 224px;
+        .taken_top{
+            width: 432px;
+            height: 224px;
+//          border: 1px solid #eee;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: 0 auto;
+            color: #666666;
+            h2{
+                color: #82C830;
+                text-align: center;
+                font-size: 48px;
+                margin-bottom: 37px;
+            }
+        }
+    }
+    .img{
+        height: 400px;
+        width: 100%;
+//      border: 1px solid #eee;
+        margin-top: 80px;
+        overflow: hidden;
+        .taken{
+            width: 25%;
+            height: 400px;
+            float: left;
+//          border:1px solid #eee;
+            img{
+                height: 400px;
+//              &:hover {
+//                  
+//              }
+                
+            }
+            &:hover{
+                height: 486px;
+                transform: translateY(-86px);
+                transition: all .5s linear;
+            }
+            .intro{
+//              height: 490px;
+                height: 86px;
+//              margin-top: 429px;
+                line-height: 86px;
+                text-indent: 33px;
+                color: $white;
+                font-size: 18px;
+                background: url(images/Heart.png)no-repeat 280px 35px;
+                background-color: #151515;
+            } 
+           
+        }
+    }
+    
+}
+
+/*第六部分*/
+.diwnload{
+    height: 723px ;
+    background: #75B42B;
+    .diwnload_content{
+        height: 723px ;
+        .diwnload_content{
+            .left,
+            .right{
+    //          background: #666666;
+                float: left;
+            }
+            .left{
+                margin-top: 225px;
+                margin-left: 150px;
+            }
+            .right{
+                width: 539px;
+                height: 328px;
+//              border: 1px solid #eeeeee;
+                margin-top: 225px;
+                .rightcontent{
+                    width: 399px;
+                    height: 161px;
+                    font-size: 48px;
+                    color: $white;
+                    margin-bottom: 23px;
+                }
+                .times{
+                    width: 190px;
+                    height: 24px;
+                    color: $white;
+                     margin-bottom: 43px;
+                }
+                .botton{
+//                  position: absolute;
+//                  top: 340px;
+//                  left: 300px;
+               }
+               .app,
+               .play{
+                   content: '';
+                   display: block;
+                   width: 255px;
+                   height: 75px;
+                   border: 1px solid $white;
+                   font-size: 30px;
+                   padding-left: 90px;
+                   color:$white;
+                   background:url(images/banner_07.png)no-repeat 22px 12px ;
+                   background-color:rgba(0,0,0,0) ;
+                   float: left;
+                   border-radius: 4%;
+               }
+               .play{
+                   background:url(images/banner_10.png)no-repeat 22px 12px ;
+                   margin-left: 29px;
+               }
+            }
+        }
+        
+    }
+}
+
+/*第七部分*/
+.compatibility{
+    height: 444px;
+    background: #E7E7E7;
+    .share_conten{
+        .top,
+        .bottom{
+            width: 970px;
+            height: 48px;
+//          background: #f00;
+            margin: 0 auto;
+            
+            .left,
+            .right{
+                width: 421px;
+                height: 151px;
+                font-size: 16px;
+                color: #666666;
+                float: left;
+            }
+            .left{
+                margin-right: 81px;
+                .imgios{
+                    margin-top: 30px;
+                }
+            }
+        }
+        .top{
+            border-bottom: 2px solid #CBCBCB;
+            margin-top: 90px;
+            margin-bottom: 35px;
+            font-size: 24px;
+           
+        }
+        .bottom{
+            height: 151px;
+             color: #666666;
+        }
+    }
+}
+
+/*第八部分*/
+.footer_conten{
+    height: 225px;
+    .left,
+    .right{
+        width: 50%;
+        height: 225px;
+//      background: #eee;
+        color: #666666;
+        float: left;
+    }
+    .left{
+        .copyright{
+            margin-top: 95px;
+            font-size: 18px;
+        }
+    }
+    .right{
+        .top{
+            margin-top: 64px;
+        }
+        .bottom{
+            margin-top: 21px;
+            input{
+                width: 311px;
+                height: 42px;
+                float: left;
+                margin-right: 11px;
+            }
+            button{
+                content: '';
+                display: block;
+                width: 101px;
+                height: 48px;
+                background: #82C830;
+                color: $white;
+                border-radius: 10%;
+            }
+        }
+    }
+}
