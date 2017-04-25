@@ -1,10 +1,17 @@
-﻿*{
+*{
     margin: 0;
     padding: 0;
 }
 body{
     padding: 0;
     margin: 0;
+}
+a{
+    text-decoration: none;
+}
+button{
+    margin: 0;
+    border: 0;
 }
 $whole: 100%;
 $content: 1200px;//内容宽度
@@ -14,9 +21,7 @@ $white: #ffffff;//白色
     width: $whole;
     height: 787px;
     background: #75B32A;
-    background-image: url(iPhone.png);
-    background-repeat:no-repeat ;
-    background-size: contain;
+   
 }
 
 /*所有的内容区域*/
@@ -29,6 +34,11 @@ $white: #ffffff;//白色
 }
 /*第一部分*/
 .banner_content{
+    background: url(iPhone.png)no-repeat 0px 0px;
+    background-size: contain;
+   img{
+        margin-top: 34px;
+   }
    ul{
        content: '';
        display: inline-block;
@@ -39,11 +49,24 @@ $white: #ffffff;//白色
    }
    li{
        float: left;
+       margin-top: -47px;
+       width: 82px;
+       height: 57px;
        font-size: 18px;
-       color: #FFFFFF;
+       color: #FFFFFF; 
+       line-height: 82px;
        margin-right: 42px;
+       text-align: center ;
+       box-sizing: border-box;
+        border-top: 5px solid #75B32A;
        &:last-child{
            margin-right: 0;
+       }
+//     &:first-child{
+//         border-top-color: #fff;
+//     }
+       &:hover{
+          border-top-color:#fff ;
        }
    }
    .title{
@@ -66,10 +89,11 @@ $white: #ffffff;//白色
    .play{
        content: '';
        display: block;
-       width: 255px;
+       width: 165px;
        height: 75px;
        border: 1px solid $white;
        font-size: 30px;
+       line-height: 75px;
        padding-left: 90px;
        color:$white;
        background:url(images/banner_07.png)no-repeat 22px 12px ;
@@ -85,17 +109,25 @@ $white: #ffffff;//白色
        position: absolute;
        bottom: 55px;
        left: 545px;
-   }
-    i{
-        display: inline-block;
-        width: 12px;
-        height: 12px;
-        border-radius:50%;
-        border: 1px solid $white;
-        &:nth-child(1){
-            background:$white;
+        
+        .dian{    
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid $white;
+                &:first-child{
+                    background-color: #Fff;
+                }
+            &:hover{
+                 background-color: #Fff;
+            }
         }
-    }
+   }
+   
+    
+        
+    
 }
 /*第二部分*/
 .whatama{
@@ -183,6 +215,24 @@ $white: #ffffff;//白色
                margin-left: 30px;
            }
        }
+        .spot{
+           position: absolute;
+           bottom: 225px;
+        
+        .dian{    
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            border: 1px solid $white;
+            &:first-child{
+                    background-color: #Fff;
+                }
+            &:hover{
+                 background-color: #Fff;
+            }
+        }
+   }
    }
 }
 
@@ -238,6 +288,8 @@ $white: #ffffff;//白色
                 margin-left: 30px;
                 h3{
                     color: #74B22B;
+                    margin-top: 35px;
+                    margin-bottom: 16px;
                 }
                 color: #666666;
             }
@@ -249,21 +301,23 @@ $white: #ffffff;//白色
             background: #82C830;
             position: absolute;
             bottom: 0px;
-            ul{
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                margin-left: 35px;
-                margin-top: 14px;
-                li{
-                    content: '';
+            .dian{
+                width: 134px;
+                height: 12px;
+                position: absolute;
+                top: 10px;
+                left: 35px;
+                a{
                     display: inline-block;
                     width: 12px;
                     height: 12px;
-                    border: 1px solid $white;
                     border-radius: 50%;
-                    &:nth-child(1){
+                    border: 1px solid $white;
+                    &:first-child{
                         background: $white;
+                    }
+                    &:hover{
+                         background-color: #Fff;
                     }
                 }
             }
@@ -298,30 +352,28 @@ $white: #ffffff;//白色
     .img{
         height: 400px;
         width: 100%;
-//      border: 1px solid #eee;
         margin-top: 80px;
-        overflow: hidden;
+        
         .taken{
             width: 25%;
             height: 400px;
             float: left;
-//          border:1px solid #eee;
+            overflow: hidden;
+            transform-origin:bottom ;
             img{
+                display: block;
                 height: 400px;
-//              &:hover {
-//                  
-//              }
-                
             }
             &:hover{
-                height: 486px;
+                transform: scale(1.1);
+                transition: all .2s linear;
+            }
+            &:hover .intro{
                 transform: translateY(-86px);
-                transition: all .5s linear;
+                transition: all .2s linear;
             }
             .intro{
-//              height: 490px;
                 height: 86px;
-//              margin-top: 429px;
                 line-height: 86px;
                 text-indent: 33px;
                 color: $white;
@@ -359,40 +411,41 @@ $white: #ffffff;//白色
                 .rightcontent{
                     width: 399px;
                     height: 161px;
-                    font-size: 48px;
+                    font-size: 45px;
                     color: $white;
-                    margin-bottom: 23px;
                 }
                 .times{
                     width: 190px;
                     height: 24px;
                     color: $white;
-                     margin-bottom: 43px;
+                    margin-top: 23px;
                 }
                 .botton{
-//                  position: absolute;
-//                  top: 340px;
-//                  left: 300px;
+                    width: 546px;
+                    height: 77px;
+                    margin-top: 43px;
+                    .app,
+                   .play{
+                       content: '';
+                       display: block;
+                       width: 165px;
+                       height: 75px;
+                       border: 1px solid $white;
+                       font-size: 30px;
+                       line-height: 75px;
+                       padding-left: 90px;
+                       color:$white;
+                       background:url(images/banner_07.png)no-repeat 22px 12px ;
+                       background-color:rgba(0,0,0,0) ;
+                       float: left;
+                       border-radius: 4%;
+                   }
+                   .play{
+                       background:url(images/banner_10.png)no-repeat 22px 12px ;
+                       margin-left: 29px;
+                   }
                }
-               .app,
-               .play{
-                   content: '';
-                   display: block;
-                   width: 255px;
-                   height: 75px;
-                   border: 1px solid $white;
-                   font-size: 30px;
-                   padding-left: 90px;
-                   color:$white;
-                   background:url(images/banner_07.png)no-repeat 22px 12px ;
-                   background-color:rgba(0,0,0,0) ;
-                   float: left;
-                   border-radius: 4%;
-               }
-               .play{
-                   background:url(images/banner_10.png)no-repeat 22px 12px ;
-                   margin-left: 29px;
-               }
+
             }
         }
         
@@ -408,7 +461,6 @@ $white: #ffffff;//白色
         .bottom{
             width: 970px;
             height: 48px;
-//          background: #f00;
             margin: 0 auto;
             
             .left,
@@ -428,8 +480,8 @@ $white: #ffffff;//白色
         }
         .top{
             border-bottom: 2px solid #CBCBCB;
-            margin-top: 90px;
             margin-bottom: 35px;
+            padding-top: 90px ;
             font-size: 24px;
            
         }
